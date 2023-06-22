@@ -1,3 +1,47 @@
-body{
+body {
     font-family: 'Noto Sans', sans-serif;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #cfcee5;
+    padding: 20px;
+    color: #33341c;
+}
+
+.inner_wrapper input[type=text],
+:in-range {
+    width: 90%;
+}
+
+input[type='text'],
+input[type='range'] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+input[type=text]:focus {
+    background-color: rgb(51, 52, 28);
+    color: rgb(207, 206, 229);
+}
+
+input[type='range'] {
+    background-color: rgb(51, 52, 28);
+    cursor: grab;
+}
+
+
+input[type=button] {
+    font-size: 25px;
+    background-color: rgb(51, 52, 28);
+    color: rgb(207, 206, 229);
+    padding: 8px;
+    border-radius: 3px;
+    border: 0px;
+    cursor: pointer;
 }
