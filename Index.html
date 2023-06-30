@@ -7,6 +7,8 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="Index.css">
     <title>ZA Home Loan Calulator</title>
 </head>
@@ -24,15 +26,36 @@
 
                     <div class="interest-container">
                         <label>Interest</label>
-                        <input type="text" placeholder="11.75%" id="interest-el">
+                        <input type="text" placeholder="%" id="interest-el">
                     </div>
 
                     <div class="Period-container">
-                        <label>Loan Period <span id="progressValue">:</span></label>
+                        <label>Loan Terms <span id="progressValue">:</span></label>
                         <input type="range" min="5" max="30" step="5" id="loanPeriod-el">
+                        <p id="deposit_el">Addtional Option</p> <span></span>
                     </div>
+                    <div id="deposit_container">
+                        <label>Deposit amount</label>
+                        <input type="text" placeholder="0.00" id="deposit_input">
+                    </div>
+
                     <div class="cal-container">
                         <input type="button" value="Calculate" id="calcBtn" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="showResultContainer">
+                <i class="fa fa-arrow-circle-down arrowStyle"></i>
+
+                <div id="resultWrapper_el">
+                    <div>
+                        <canvas id="myChart"></canvas>
+                    </div>
+                    <div id="monthly_el">
+                        <h3>PM</h3>
+                        <span id="installment">R0,000</span>
                     </div>
                 </div>
             </div>
