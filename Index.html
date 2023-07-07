@@ -8,7 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!--APEXCHARTS-->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
     <link rel="stylesheet" href="Index.css">
     <title>ZA Home Loan Calulator</title>
 </head>
@@ -50,8 +53,8 @@
                 <i class="fa fa-arrow-circle-down arrowStyle"></i>
 
                 <div id="resultWrapper_el">
-                    <div>
-                        <canvas id="myChart"></canvas>
+                    <div id="canvaChart_container">
+                        <div id="chart"></div>
                     </div>
                     <div id="monthly_el">
                         <h3>PM</h3>

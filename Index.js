@@ -5,7 +5,7 @@ const period_el = document.querySelector("#loanPeriod-el");
 const calcBtn = document.querySelector("#calcBtn");
 const interestInput = document.querySelector("#interest-el");
 const amount_el = document.querySelector("#loanAmount-el");
-const ctx = document.getElementById('myChart').getContext("2d");
+let ctx = document.querySelector("#chart");
 
 const showResult_el = document.querySelector(".showResultContainer");
 const installment_el = document.querySelector("#installment");
@@ -20,7 +20,7 @@ let progressValue
 let interestRate = 0
 yearValue.textContent = 0
 let loanDeposit = 0
-
+let data = []
 
 period_el.addEventListener('input', function (e) {
   progressValue = e.target.value;
@@ -30,16 +30,23 @@ period_el.addEventListener('input', function (e) {
 
 
 calcBtn.addEventListener('click', function () {
-  interestRate = interestInput.value
-  loanDeposit = depositInput.value
+
+  const amountValue = Number(amount_el.value)
+  interestRate = Number(interestInput.value)
+  loanDeposit = Number(depositInput.value)
+
+  data[0] = amountValue
+  data[1] = loanDeposit
+  
   if (amount_el.value === "" || interestInput.value === "") {
     alert("please fill in the field")
   } else {
-    const payment = monthlyPaymentResult(amount_el.value, interestRate, progressValue, loanDeposit).toFixed(0)
+    const payment = monthlyPaymentResult(amountValue, interestRate, progressValue, loanDeposit).toFixed(0)
     installment_el.textContent = `R${payment}`
     showResult_el.style.visibility = "visible"
     amount_el.style.border = "0px solid inherit"
-    drawCircle(ctx, amount_el.value, loanDeposit)
+    drawCircle(ctx, data)
+    console.log(data)
   }
 
 
@@ -48,6 +55,10 @@ calcBtn.addEventListener('click', function () {
 additional_el.addEventListener("click", function () {
   additional_container.classList.toggle("deposit_container")
 })
+
+
+
+
 
 
 

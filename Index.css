@@ -65,22 +65,25 @@ input[type=button] {
     color: #fff;
 }
 
-#myChart {
-    width: 300px;
-    height: 300px;
+#chart {
+    width: 400px;
+    height: 400px;
     margin: 0 auto;
+    margin-top: -16rem;
+    margin-left: 19.5rem;
 }
 
 #monthly_el {
     display: flex;
     position: absolute;
-    margin: -11.3rem 10.2rem;
+    margin: -10.3rem 10.2rem;
     text-align: center;
     color: #fff;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 4%;
+    width: 3%;
+    font-size: 1.2rem;
 }
 
 #monthly_el h3 {
@@ -100,3 +103,8 @@ input[type=button] {
 }
 
 
+.apexcharts-canvas {
+    position: absolute !important;
+    margin-top: 10rem;
+    margin-left: -16rem;
+}
