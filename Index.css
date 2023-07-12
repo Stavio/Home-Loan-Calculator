@@ -6,6 +6,13 @@ h3 {
     font-size: 1.5rem;
 }
 
+.logo{
+    display: block;
+    margin-bottom: 2.25rem;
+    user-select: none!important;
+    pointer-events: none;
+}
+
 .container {
     max-width: 400px;
     margin: 0 auto;
@@ -48,11 +55,11 @@ input[type=button] {
     transition: .3s;
 }
 
-input[type=button]:hover{
+input[type=button]:hover {
     box-shadow: 8px 8px #99bdff6d;
     transition: .3s;
-    color:#fff;
-} 
+    color: #fff;
+}
 
 .showResultContainer {
     max-width: 400px;
@@ -96,7 +103,7 @@ input[type=button]:hover{
     font-size: 1rem;
 }
 
-#deposit_el{
+#deposit_el {
     text-decoration: underline;
     cursor: pointer;
     display: block;
@@ -104,7 +111,7 @@ input[type=button]:hover{
     margin-top: -0.5rem;
 }
 
-.deposit_container{
+.deposit_container {
     display: none;
 }
 
@@ -114,4 +121,3 @@ input[type=button]:hover{
     margin-top: 10rem;
     margin-left: 2rem;
 }
-
