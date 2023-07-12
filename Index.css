@@ -45,7 +45,14 @@ input[type=button] {
     border-radius: 3px;
     border: 0px;
     cursor: pointer;
+    transition: .3s;
 }
+
+input[type=button]:hover{
+    box-shadow: 8px 8px #99bdff6d;
+    transition: .3s;
+    color:#fff;
+} 
 
 .showResultContainer {
     max-width: 400px;
@@ -66,17 +73,16 @@ input[type=button] {
 }
 
 #chart {
-    width: 400px;
-    height: 400px;
+    width: 394px;
+    height: 411px;
     margin: 0 auto;
     margin-top: -16rem;
-    margin-left: 19.5rem;
 }
 
 #monthly_el {
     display: flex;
     position: absolute;
-    margin: -10.3rem 10.2rem;
+    margin: -10.3rem 9.9rem;
     text-align: center;
     color: #fff;
     flex-direction: column;
@@ -106,5 +112,6 @@ input[type=button] {
 .apexcharts-canvas {
     position: absolute !important;
     margin-top: 10rem;
-    margin-left: -16rem;
+    margin-left: 2rem;
 }
+

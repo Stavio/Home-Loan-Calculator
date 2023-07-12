@@ -32,23 +32,24 @@ export function drawCircle(chartElement, data) {
 
   let options = {
     series: [0, 0],
-    labels: ['Home Amount', 'Deposit'],
+    labels: ['Amount', 'Deposit'],
     chart: {
       type: 'donut',
       plotOptions: {
         pie: {
           donut: {
-            size: '50%',
+            size: '40%',
           }
         }
       }
     },
+    colors: ['#cfcee4', '#33341e'],
 
     responsive: [{
-      breakpoint: 400,
+      breakpoint: 200,
       options: {
         chart: {
-          width: 400
+          width: 200
         },
         legend: {
           position: 'bottom'
